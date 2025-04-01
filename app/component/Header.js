@@ -154,6 +154,13 @@ export default function Navbar() {
                         </div>
                     </div>
                     <Link
+                        href="/Blog"
+                        className={`text-gray-300 hover:text-white ${pathname === '/Contact' ? 'text-white border-b-2 border-white' : ''
+                            } p-2`}
+                    >
+                        Blog
+                    </Link>
+                    <Link
                         href="/Contact"
                         className={`text-gray-300 hover:text-white ${pathname === '/Contact' ? 'text-white border-b-2 border-white' : ''
                             } p-2`}
