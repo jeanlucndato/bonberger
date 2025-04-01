@@ -1,0 +1,45 @@
+my-church-website/
+├── components/        # Composants réutilisables
+│   ├── Header/
+│   │   ├── Header.jsx
+│   │   └── Header.module.css
+│   ├── Footer/
+│   │   ├── Footer.jsx
+│   │   └── Footer.module.css
+│   ├── HeroSection/
+│   │   ├── HeroSection.jsx
+│   │   └── HeroSection.module.css
+│   ├── Card/
+│   │   ├── Card.jsx
+│   │   └── Card.module.css
+│   └── ...
+├── pages/             # Routes et pages
+│   ├── index.jsx        # Page d'accueil
+│   ├── about.jsx        # Page "À propos"
+│   ├── services.jsx     # Page "Services"
+│   ├── events.jsx       # Page "Événements"
+│   ├── sermons.jsx      # Page "Sermons"
+│   ├── blog/            # Dossier pour le blog
+│   │   ├── [slug].jsx   # Page d'article de blog dynamique
+│   │   └── index.jsx    # Liste des articles de blog
+│   ├── contact.jsx      # Page "Contact"
+│   └── _app.jsx         # Configuration globale de l'application
+├── public/            # Assets statiques (images, polices, etc.)
+│   ├── images/
+│   │   ├── logo.png
+│   │   └── ...
+│   └── ...
+├── styles/            # Styles globaux et Tailwind CSS
+│   ├── globals.css      # Styles globaux
+│   └── tailwind.config.js # Configuration Tailwind CSS
+├── utils/             # Fonctions utilitaires
+│   ├── api.js          # Interactions avec l'API (si nécessaire)
+│   └── helpers.js      # Fonctions d'aide
+├── data/              # Données statiques (événements, sermons, etc.)
+│   ├── events.json
+│   ├── sermons.json
+│   └── ...
+├── .eslintrc.json     # Configuration ESLint
+├── .prettierrc.json   # Configuration Prettier
+├── package.json       # Dépendances et scripts
+└── README.md
