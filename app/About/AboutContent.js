@@ -3,6 +3,7 @@ import Image from 'next/image'
 
 // importe les images
 import propAbout from "../../public/assets/img/prop11.jpeg"
+import prop1 from "../../public/assets/img/prop12.jpg"
 
 const AboutContent = () => {
     return (
@@ -10,7 +11,7 @@ const AboutContent = () => {
             {/* entete du about */}
             <div className="relative h-[500px] overflow-hidden">
                 <Image src={propAbout} alt="Hero Background" layout="fill" objectFit="cover" />
-                <div className="absolute inset-0 text-gray-900 flex flex-col justify-center text-left p-8">
+                <div className="absolute inset-0 text-red-500 flex flex-col justify-center text-left p-8">
                     <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">Nous joindre</h1>
                     <p className="text-lg sm:text-xl md:text-2xl mb-8">
                         N'hésitez pas à nous contacter pour toute question, demande de devis ou information supplémentaire. Notre équipe est à votre disposition pour vous accompagner dans la réalisation de vos projets de construction en RDC.
@@ -19,11 +20,11 @@ const AboutContent = () => {
             </div>
 
             {/*  */}
-            <div className="container mx-auto px-4 py-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="container mx-auto mt-8 px-4 py-8">
+                <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {/* Colonne de Texte */}
-                    <div className="md:col-span-1 lg:col-span-1">
-                        <h1 className="text-4xl font-bold mb-4">Making the world a better place</h1>
+                    <div className="md:col-span-1 border border-red-500 p-12 lg:col-span-1">
+                        <h1 className="text-4xl text-red-500 text-center -underline-offset-1 font-bold mb-4">Introduction & Vision</h1>
                         <p className="mb-6">
                             Join Non-profit Organisation in our mission of making the world a better place. We strive to create positive change through various charitable initiatives and community outreach programs.
                         </p>
@@ -40,21 +41,21 @@ const AboutContent = () => {
                     {/* Colonne d'Images */}
                     <div className="md:col-span-1 lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="aspect-w-16 aspect-h-9">
-                            <img src="URL_DE_VOTRE_IMAGE_1" alt="Image 1" className="object-cover rounded-lg" />
+                            <Image src={prop1} alt="Image 1" className="object-cover rounded-lg" />
                         </div>
                         <div className="aspect-w-16 aspect-h-9">
-                            <img src="URL_DE_VOTRE_IMAGE_2" alt="Image 2" className="object-cover rounded-lg" />
+                            <Image src={prop1} alt="Image 2" className="object-cover rounded-lg" />
                         </div>
                         <div className="aspect-w-16 aspect-h-9 md:col-span-2">
-                            <img src="URL_DE_VOTRE_IMAGE_3" alt="Image 3" className="object-cover rounded-lg" />
+                            <Image src={prop1} alt="Image 3" className="object-cover rounded-lg" />
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className="container mx-auto px-4 py-8 bg-gray-400">
+            <div className="container mx-auto px-4 py-8 bg-red-100">
                 <div className="bg-gray-100 rounded-lg p-6 mb-8">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="grid  grid-cols-1 md:grid-cols-3 gap-8">
                         {/* Colonne 1 */}
                         <div className="text-center md:text-left">
                             <h2 className="text-2xl font-semibold mb-2">01. Prove every project</h2>
@@ -87,9 +88,9 @@ const AboutContent = () => {
                 {/* Section d'Image (si vous avez besoin de la partie image) */}
                 <div className="relative h-[400px] overflow-hidden rounded-3xl">
                     <Image src={propAbout} alt="Hero Background" layout="fill" objectFit="cover" />
-                    <div className="absolute inset-0 text-gray-900 flex flex-col justify-center text-left p-8">
+                    <div className="absolute inset-0 text-red-500 flex flex-col justify-center text-left p-8">
                         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">Nous joindre</h1>
-                        <p className="text-lg sm:text-xl md:text-2xl mb-8">
+                        <p className="text-lg text-white sm:text-xl md:text-2xl mb-8">
                             N'hésitez pas à nous contacter pour toute question, demande de devis ou information supplémentaire. Notre équipe est à votre disposition pour vous accompagner dans la réalisation de vos projets de construction en RDC.
                         </p>
                     </div>
@@ -101,13 +102,13 @@ const AboutContent = () => {
             {/* a container for donation */}
 
             <div className="container mx-auto px-4 py-8">
-                <div className="text-center md:text-left">
-                    <p className="uppercase text-green-500 font-semibold mb-2">Make a difference today</p>
+                <div className="text-center ">
+                    <p className="uppercase text-red-500 font-semibold mb-2">Make a difference today</p>
                     <h2 className="text-3xl font-bold mb-4">Your contribution matters. Support our cause by making a donation.</h2>
                     <p className="mb-6">
                         Every dollar counts and helps us bring hope, joy, and essential resources to those in need. Together, we can create a better tomorrow.
                     </p>
-                    <button className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full">
+                    <button className="bg-red-500 hover:bg-black text-white font-bold py-3 px-6 rounded-full">
                         Donate Today
                     </button>
                 </div>
@@ -117,7 +118,7 @@ const AboutContent = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
                     {/* Colonne de l'Image */}
                     <div className="md:col-span-1">
-                        <img src="URL_DE_VOTRE_IMAGE" alt="Donation" className="w-full rounded-lg" />
+                        <Image src={prop1} alt="Donation" className="w-full rounded-lg" />
                     </div>
 
                     {/* Colonne du Texte */}

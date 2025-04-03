@@ -12,9 +12,9 @@ import volunteerImg from '../../public/assets/img/prop8.jpg';
 const Index = () => {
     return (
         <>
-            <div className="relative h-[650px] overflow-hidden">
+            <div className="relative h-[650px] rounde-xl overflow-hidden">
                 <Image src={indeximg} alt="Hero Background" layout="fill" objectFit="cover" />
-                <div className="absolute inset-0 text-gray-900 flex flex-col justify-center text-left p-8">
+                <div className="absolute inset-0 text-red-500 flex flex-col justify-center text-left p-8">
                     <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">Nous joindre</h1>
                     <p className="text-lg sm:text-xl md:text-2xl mb-8">
                         N'hésitez pas à nous contacter pour toute question, demande de devis ou information supplémentaire. Notre équipe est à votre disposition pour vous accompagner dans la réalisation de vos projets de construction en RDC.
@@ -32,7 +32,7 @@ const Index = () => {
                         <p className="text-lg mb-6">
                             A transformational journey towards bringing hope and compassion to the world.
                         </p>
-                        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                        <button className="bg-red-600 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded">
                             Read More
                         </button>
                     </div>
@@ -53,7 +53,7 @@ const Index = () => {
                 </div>
             </section>
 
-            <section className="bg-gray-100 py-12">
+            <section className="bg-red-100 py-12">
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                         <div>
@@ -81,13 +81,13 @@ const Index = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="bg-green-100 p-8 mt-8 rounded-lg text-center">
+                    <div className="bg-white p-8 mt-8 rounded-lg text-center">
                         <h2 className="text-2xl md:text-3xl font-bold mb-4">We can create a better tomorrow</h2>
                         <p className="text-lg text-gray-700 mb-6">
                             Every dollar counts and helps us bring hope and essential resources to those in need.
                         </p>
-                        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full">
-                            Donate Now
+                        <button className="bg-red-500 hover:bg-black text-white font-bold py-2 px-6 rounded-full">
+                            Faire un Don
                         </button>
                     </div>
                 </div>
@@ -106,7 +106,7 @@ const Index = () => {
                         <p className="text-lg text-gray-700 mb-6">
                             Become part of a transformative movement by supporting our non-profit organization. Together we can make lasting change.
                         </p>
-                        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full">
+                        <button className="bg-red-500 hover:bg-black text-white font-bold py-2 px-6 rounded-full">
                             Register Now
                         </button>
                     </div>

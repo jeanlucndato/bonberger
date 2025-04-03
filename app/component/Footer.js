@@ -21,7 +21,7 @@ const Footer = () => {
     };
 
     return (
-        <footer className="bg-gray-200 py-8">
+        <footer className="bg-gray-100 py-8">
             <div className="container mx-auto px-4">
                 <section className="mb-8">
                     <motion.h2
@@ -102,25 +102,25 @@ const Footer = () => {
                 >
                     <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-4 px-4">
                         <div className="text-center lg:text-left">
-                            <h3 className="text-lg font-semibold mb-2 text-red-600">Newsletter</h3>
-                            <p className="text-gray-600">Abonnez-vous pour recevoir nos actualités.</p>
+                            <h3 className="text-lg font-semibold mb-2 text-red-500">Newsletter</h3>
+                            <p className="text-gray-900">Abonnez-vous pour recevoir nos actualités.</p>
                         </div>
                         <div className="flex w-full lg:w-96">
                             <input
                                 type="email"
                                 placeholder="Entrez votre email"
-                                className="w-full px-4 py-2 rounded-l-md border-2 border-red-600 focus:outline-none focus:ring-2 focus:ring-red-500"
+                                className="w-full px-4 py-2 rounded-l-md border-2 border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                             />
-                            <button className="bg-red-900 hover:bg-black text-white py-2 px-6 rounded-r-md transition-colors">
+                            <button className="bg-red-500 hover:bg-black text-white py-2 px-6 rounded-r-md transition-colors">
                                 S'abonner
                             </button>
                         </div>
                     </div>
                 </motion.div>
 
-                <div className="bg-gray-800 py-4 mt-8">
+                <div className="bg-red-500 py-4 mt-8">
                     <motion.div
                         variants={footerVariants}
                         initial="hidden"
@@ -129,13 +129,13 @@ const Footer = () => {
                     >
                         <p className="text-sm text-white">© 2024 Charity. Tous droits réservés.</p>
                         <div className="flex space-x-4">
-                            <a href="#" className="text-red-600 hover:text-black transition-colors">
+                            <a href="#" className="text-white hover:text-black transition-colors">
                                 <FaFacebookF size={20} />
                             </a>
-                            <a href="#" className="text-red-600 hover:text-black transition-colors">
+                            <a href="#" className="text-white hover:text-black transition-colors">
                                 <FaTwitter size={20} />
                             </a>
-                            <a href="#" className="text-red-600 hover:text-black transition-colors">
+                            <a href="#" className="text-white hover:text-black transition-colors">
                                 <FaInstagram size={20} />
                             </a>
                         </div>

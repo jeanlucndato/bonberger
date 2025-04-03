@@ -1,17 +1,18 @@
 import React from 'react'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 // importe les images
 import propContact from "../../public/assets/img/prop11.jpeg"
 
-const AboutContent = () => {
+const ContactContent = () => {
     return (
         <>
             <div className="relative h-[500px] overflow-hidden">
                 <Image src={propContact} alt="Hero Background" layout="fill" objectFit="cover" />
-                <div className="absolute inset-0 text-gray-900 flex flex-col justify-center text-left p-8">
+                <div className="absolute inset-0 text-red-500 flex flex-col justify-center text-left p-8">
                     <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">Nous joindre</h1>
-                    <p className="text-lg sm:text-xl md:text-2xl mb-8">
+                    <p className="text-lg  sm:text-xl md:text-2xl mb-8">
                         N'hésitez pas à nous contacter pour toute question, demande de devis ou information supplémentaire. Notre équipe est à votre disposition pour vous accompagner dans la réalisation de vos projets de construction en RDC.
                     </p>
                 </div>
@@ -22,7 +23,7 @@ const AboutContent = () => {
             <div className="container mx-auto px-4 py-8">
                 {/* Section Principale (Titre et Paragraphe) */}
                 <div className="text-center md:text-left mb-8">
-                    <h1 className="text-4xl font-bold mb-4">Contact</h1>
+                    <h1 className="text-4xl text-red-500 font-bold mb-4">Contact</h1>
                     <p className="text-lg text-gray-600">
                         Connect with us for more information about our Non-profit Organisation and how you can contribute to our worthy causes.
                     </p>
@@ -31,37 +32,37 @@ const AboutContent = () => {
                 {/* Section des Informations de Contact */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {/* Colonne Téléphone */}
-                    <div className="bg-gray-100 rounded-lg p-6">
+                    <div className="bg-red-100 rounded-lg p-6">
                         <h3 className="text-xl font-semibold mb-2">PHONE</h3>
                         <p>Tel: (555) 123-2222</p>
                         <p>Fax: (555) 123-2225</p>
                     </div>
 
                     {/* Colonne Centre de Dons */}
-                    <div className="bg-gray-100 rounded-lg p-6">
-                        <h3 className="text-xl font-semibold mb-2">DONATION CENTER</h3>
+                    <div className="bg-red-100 rounded-lg p-6">
+                        <h3 className="text-xl font-semibold mb-2">FAIR UN DON</h3>
                         <p>PO Box 1234 Demotown, MD12345-5026</p>
                     </div>
 
                     {/* Colonne Besoin d'Assistance */}
-                    <div className="bg-gray-100 rounded-lg p-6">
-                        <h3 className="text-xl font-semibold mb-2">NEED ASSISTANCE?</h3>
+                    <div className="bg-red-100 rounded-lg p-6">
+                        <h3 className="text-xl font-semibold mb-2">BESOINS D'UNE ASSISTANCE?</h3>
                         <p>Check out our Help Center.</p>
                     </div>
                 </div>
             </div>
 
-            <div className="container mx-auto px-4 py-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="container bg-gray-100 mx-auto px-4 py-8">
+                <div className="grid m-10  grid-cols-1 md:grid-cols-2 gap-8">
                     {/* Colonne de Gauche (Texte et Informations) */}
                     <div className="md:col-span-1">
-                        <h2 className="text-3xl font-bold mb-4">How can we help you?</h2>
+                        <h2 className="text-3xl text-red-500 font-bold mb-4">Comment Nous joindre?</h2>
                         <p className="text-lg text-gray-600 mb-6">
                             Our Non-profit Organisation is dedicated to helping those in need. Contact us to see how we can help you or someone you know.
                         </p>
 
                         <div className="mb-6">
-                            <h3 className="text-xl font-semibold mb-2">Headquarter</h3>
+                            <h3 className="text-xl font-semibold mb-2">Himbi</h3>
                             <p>2715 Demo St. San Jose, South Dakota 83475</p>
                             <p>(205) 555-0100</p>
                         </div>
@@ -72,14 +73,14 @@ const AboutContent = () => {
                             <p>(603) 555-0123</p>
                         </div>
 
-                        <div className="mt-8">
+                        <div className="mt-8  ">
                             <h3 className="text-xl font-semibold mb-2">Follow us on</h3>
                             <div className="flex space-x-4">
                                 {/* Icônes de Réseaux Sociaux (à remplacer par vos icônes) */}
-                                <a href="#" className="text-gray-600 hover:text-blue-500">Facebook</a>
-                                <a href="#" className="text-gray-600 hover:text-blue-500">Twitter</a>
-                                <a href="#" className="text-gray-600 hover:text-blue-500">Instagram</a>
-                                <a href="#" className="text-gray-600 hover:text-blue-500">YouTube</a>
+                                <a href="#" className="text-red-500 hover:text-black">Facebook</a>
+                                <a href="#" className="text-red-500 hover:text-black">Twitter</a>
+                                <a href="#" className="text-red-500 hover:text-black">Instagram</a>
+                                <a href="#" className="text-red-500 hover:text-black">YouTube</a>
                             </div>
                         </div>
                     </div>
@@ -106,18 +107,21 @@ const AboutContent = () => {
                             <textarea className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="message" rows="4" placeholder="Enter your message"></textarea>
                         </div>
 
-                        <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full">Send Message</button>
+                        <button animate={{ scale: 1.5 }}
+                            className="bg-red-500 hover:bg-black text-white font-bold py-2 px-4 rounded-full">
+                            Send Message
+                        </button>
                     </div>
                 </div>
             </div>
 
             {/* la carte  */}
-            <div className="container mx-auto px-4 py-8">
+            <div className="container bg-red-200 mx-auto px-4 py-8">
                 <div className="grid grid-cols-1 gap-8">
                     {/* Section de Texte */}
-                    <div className="text-center md:text-left">
-                        <h2 className="text-3xl font-bold mb-4">WHERE WE WORK</h2>
-                        <p className="text-lg text-gray-600 mb-6">
+                    <div className="text-center text-black md:text-left">
+                        <h2 className="text-3xl text-center font-bold mb-4">WHERE WE WORK</h2>
+                        <p className="text-lg text-center text-gray-600 mb-6">
                             More than 70,000 staff in 120 countries, serving those in need. 99% of them are locals. All with your support.
                         </p>
                     </div>
@@ -157,4 +161,4 @@ const AboutContent = () => {
     )
 }
 
-export default AboutContent
+export default ContactContent;
