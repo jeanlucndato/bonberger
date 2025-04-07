@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
@@ -20,14 +21,14 @@ const ContactContent = () => {
 
             {/*  */}
 
-            <div className="container mx-auto px-4 py-8">
+            <motion.div variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.25 }, }, }} initial="hidden" animate="show" className="container mx-auto px-4 py-8">
                 {/* Section Principale (Titre et Paragraphe) */}
-                <div className="text-center md:text-left mb-8">
+                <motion.div variants={{ hidden: { opacity: 0 }, show: { opacity: 1 } }} className="text-center md:text-left mb-8">
                     <h1 className="text-4xl text-red-500 font-bold mb-4">Contact</h1>
                     <p className="text-lg text-gray-600">
                         Connect with us for more information about our Non-profit Organisation and how you can contribute to our worthy causes.
                     </p>
-                </div>
+                </motion.div>
 
                 {/* Section des Informations de Contact */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -50,7 +51,7 @@ const ContactContent = () => {
                         <p>Check out our Help Center.</p>
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
             <div className="container bg-gray-100 mx-auto px-4 py-8">
                 <div className="grid m-10  grid-cols-1 md:grid-cols-2 gap-8">
