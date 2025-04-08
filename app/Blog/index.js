@@ -3,8 +3,6 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import blogimg from "../../public/assets/img/prop1.jpg";
-import Header from "../../app/component/Header";
-import Footer from '../../app/component/Footer';
 import connectToDatabase from '@/lib/mongodb';
 
 async function getPosts() {
@@ -25,7 +23,7 @@ export default async function BlogIndex() {
     return (
         <div className="bg-gray-100 min-h-screen">
             <div className="container mx-auto px-4 md:px-0 py-10">
-                <Header />
+
 
                 <main className="mt-8">
                     <div className="relative h-[450px] rounded-xl overflow-hidden mb-8">
