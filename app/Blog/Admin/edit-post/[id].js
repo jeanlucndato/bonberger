@@ -13,6 +13,8 @@ const ClassicEditor = dynamic(() => import('@ckeditor/ckeditor5-build-classic').
 function EditPost() {
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
+    const [author, setAuthor] = useState('');
+    const [tags, setTags] = useState(''); // Les tags seront affichés et modifiés comme une chaîne séparée par des virgules
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const router = useRouter();
@@ -30,6 +32,8 @@ function EditPost() {
                 .then(data => {
                     setTitle(data.title);
                     setContent(data.content);
+                    setAuthor(data.author);
+                    setTags(data.tags ? data.tags.join(', ') : ''); // Convertir le tableau de tags en chaîne
                     setLoading(false);
                 })
                 .catch(err => {
@@ -48,7 +52,7 @@ function EditPost() {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ title, content }),
+                body: JSON.stringify({ title, content, author, tags: tags.split(',').map(tag => tag.trim()) }),
             });
 
             if (response.ok) {
@@ -87,6 +91,31 @@ function EditPost() {
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
                         required
+                    />
+                </div>
+                <div className="mb-4">
+                    <label htmlFor="author" className="block text-gray-700 text-sm font-bold mb-2">
+                        Auteur:
+                    </label>
+                    <input
+                        type="text"
+                        id="author"
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        value={author}
+                        onChange={(e) => setAuthor(e.target.value)}
+                        required
+                    />
+                </div>
+                <div className="mb-4">
+                    <label htmlFor="tags" className="block text-gray-700 text-sm font-bold mb-2">
+                        Tags (séparés par des virgules):
+                    </label>
+                    <input
+                        type="text"
+                        id="tags"
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        value={tags}
+                        onChange={(e) => setTags(e.target.value)}
                     />
                 </div>
                 <div className="mb-4">

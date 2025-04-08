@@ -71,6 +71,7 @@ export default async function BlogIndex() {
                                                 Lire la suite &rarr;
                                             </span>
                                         </div>
+
                                     </div>
                                 </Link>
                             </div>
