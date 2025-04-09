@@ -26,10 +26,11 @@ const BlogListe = () => {
 
             </div>
             <div className=' flex flex-wrap justify-around gap-1 gap-y-10 mb-20 xl-mx-24 '>
-                {blog_data.map((item, index) => {
-                    return <BlogItem key={index} image={item.image} title={item.title} content={item.content} date={item.date} category={item.category} />
+                {blog_data.filter((item) => menu === "All" ? true : item.category === menu).map((item, index) => {
+                    return <BlogItem key={index} id={item.id} image={item.image} title={item.title} content={item.content} date={item.date} category={item.category} />
 
                 })}
+
             </div>
 
         </>

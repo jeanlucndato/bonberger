@@ -4,6 +4,15 @@ import prop8 from './prop8.jpg'
 import prop9 from './prop9.jpg'
 import prop10 from './prop10.jpg'
 import prop11 from './prop11.jpeg'
+// fromm assets
+import logo from './logob.jpeg'
+
+// les ellements importe
+
+export const assets = {
+    logo
+
+}
 
 export const blog_data = [
     {
@@ -37,7 +46,7 @@ export const blog_data = [
         image: prop9,
     },
     {
-        id: 1,
+        id: 4,
         title: "La Paix dans le Cœur",
         author: "Prêtre Jean-Pierre",
         content: "Un article sur la recherche de la paix intérieure...",
@@ -47,7 +56,7 @@ export const blog_data = [
         image: prop11,
     },
     {
-        id: 2,
+        id: 5,
         title: "L'Importance de la Foi",
         author: "Soeur Marie",
         content: "Une réflexion sur la foi et sa place dans notre vie...",
@@ -57,7 +66,7 @@ export const blog_data = [
         image: prop7,
     },
     {
-        id: 3,
+        id: 6,
         title: "La Communauté Bonberge",
         author: "Pasteur David",
         content: "Un article sur l'importance de la communauté...",
@@ -67,7 +76,7 @@ export const blog_data = [
         image: prop9,
     },
     {
-        id: 1,
+        id: 7,
         title: "La Paix dans le Cœur",
         author: "Prêtre Jean-Pierre",
         content: "Un article sur la recherche de la paix intérieure...",
@@ -77,7 +86,7 @@ export const blog_data = [
         image: prop11,
     },
     {
-        id: 2,
+        id: 8,
         title: "L'Importance de la Foi",
         author: "Soeur Marie",
         content: "Une réflexion sur la foi et sa place dans notre vie...",
@@ -87,7 +96,7 @@ export const blog_data = [
         image: prop7,
     },
     {
-        id: 3,
+        id: 9,
         title: "La Communauté Bonberge",
         author: "Pasteur David",
         content: "Un article sur l'importance de la communauté...",
@@ -97,7 +106,7 @@ export const blog_data = [
         image: prop9,
     },
     {
-        id: 1,
+        id: 10,
         title: "La Paix dans le Cœur",
         author: "Prêtre Jean-Pierre",
         content: "Un article sur la recherche de la paix intérieure...",
@@ -107,7 +116,7 @@ export const blog_data = [
         image: prop11,
     },
     {
-        id: 2,
+        id: 11,
         title: "L'Importance de la Foi",
         author: "Soeur Marie",
         content: "Une réflexion sur la foi et sa place dans notre vie...",
@@ -117,7 +126,7 @@ export const blog_data = [
         image: prop7,
     },
     {
-        id: 3,
+        id: 12,
         title: "La Communauté Bonberge",
         author: "Pasteur David",
         content: "Un article sur l'importance de la communauté...",
@@ -127,7 +136,7 @@ export const blog_data = [
         image: prop9,
     },
     {
-        id: 1,
+        id: 13,
         title: "La Paix dans le Cœur",
         author: "Prêtre Jean-Pierre",
         content: "Un article sur la recherche de la paix intérieure...",
@@ -137,7 +146,7 @@ export const blog_data = [
         image: prop11,
     },
     {
-        id: 2,
+        id: 14,
         title: "L'Importance de la Foi",
         author: "Soeur Marie",
         content: "Une réflexion sur la foi et sa place dans notre vie...",
@@ -147,7 +156,7 @@ export const blog_data = [
         image: prop7,
     },
     {
-        id: 3,
+        id: 15,
         title: "La Communauté Bonberge",
         author: "Pasteur David",
         content: "Un article sur l'importance de la communauté...",
@@ -157,3 +166,6 @@ export const blog_data = [
         image: prop9,
     },
 ];
+
+
+
