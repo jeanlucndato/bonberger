@@ -2,28 +2,21 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## le plan mon-blog/
 
-├── pages
-│ ├── \_app.js
-│ ├── \_document.js
-│ ├── index.js // Votre page d'accueil publique
-│ └── blog
-│ ├── [slug].js // Page d'affichage d'un article de blog
-│ └── index.js // Liste des articles de blog (facultatif)
-│ └── admin // Dossier pour l'administration
-│ ├── index.js // Tableau de bord de l'administrateur
-│ ├── create-post.js // Formulaire de création d'un nouvel article
-│ ├── edit-post/[id].js // Formulaire d'édition d'un article existant
-│ └── ... autres pages d'administration
-├── components
-│ ├── ... composants publics de votre site
-│ └── admin // Composants spécifiques à l'administration (facultatif)
-│ ├── ...
-├── lib
-│ ├── api.js // Fonctions pour interagir avec votre API backend
-│ └── ... autres librairies
-├── public
-│ └── ... assets
-└── ... autres fichiers de configuration
+/app
+/blog
+/[id]
+page.js
+page.js
+/components
+BlogPost.js
+Header.js
+Footer.js
+/styles
+globals.css
+/utils
+db.js
+layout.js
+page.js
 
 # TinyMCE (avec le wrapper React officiel)
 
