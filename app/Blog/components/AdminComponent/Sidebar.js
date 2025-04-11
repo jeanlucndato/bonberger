@@ -1,40 +1,39 @@
-import React from 'react'
-import { assets } from '../../Assets/assets'
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import { IoIosAdd } from "react-icons/io";
+import { assets } from '../../Assets/assets';
 
 const Sidebar = () => {
     return (
-        <div className='flex flex-col bg-slate-100'>
-            <div className='px-2 sm:pl-14 py-3 border border-red-500'>
-
-
-                <Image src={assets.logo} width={120} />
+        <div className='flex flex-col bg-gray-100 mt-20  text-gray-800 shadow-md w-64'>
+            <div className='h-16 flex items-center justify-center p-4'>
+                <Link href="/blog/admin" className="focus:outline-none">
+                    <Image src={assets.logo} width={100} height={30} alt="Logo du Blog" />
+                </Link>
             </div>
-            <div className='w-28 sm:w-80 h-[100vh] relative py-12 border border-red-500 ' >
-
-                <div className='flex items-center border border-red-500 gap-3 font-medium px-3 py-2 bg-red-200 shadow-[-5px_5px_0px_#000000]' >
-                    <Link href='/admin/addProduct'>
-                        <IoIosAdd />
-                        <p>Ajouter Blog     </p>
+            <nav className='flex-1 p-4'>
+                <div className='mb-4'>
+                    <Link href='/Blog/Admin/addProduct' className='flex items-center p-2 rounded-md hover:bg-gray-200 transition-colors focus:outline-none'>
+                        <IoIosAdd className='mr-2 text-xl' />
+                        <span className='text-sm font-medium'>Ajouter un Blog</span>
                     </Link>
                 </div>
-                <div className='mt-5 flex items-center border border-red-500 gap-3 font-medium px-3 py-2 bg-red-200 shadow-[-5px_5px_0px_#000000]' >
-                    <Link href='/admin/blogList'>
-                        <IoIosAdd />
-                        <p>Blog List     </p>
+                <div className='mb-4'>
+                    <Link href='/Blog/Admin/blogList' className='flex items-center p-2 rounded-md hover:bg-gray-200 transition-colors focus:outline-none'>
+                        <IoIosAdd className='mr-2 text-xl' />
+                        <span className='text-sm font-medium'>Liste des Blogs</span>
                     </Link>
                 </div>
-                <div className='mt-5 flex items-center border border-red-500 gap-3 font-medium px-3 py-2 bg-red-200 shadow-[-5px_5px_0px_#000000]' >
-                    <Link href='/admin/subscription'>
-                        <IoIosAdd />
-                        <p>Subscription     </p>
+                <div>
+                    <Link href='/Blog/Admin/subscription' className='flex items-center p-2 rounded-md hover:bg-gray-200 transition-colors focus:outline-none'>
+                        <IoIosAdd className='mr-2 text-xl' />
+                        <span className='text-sm font-medium'>Abonnements</span>
                     </Link>
                 </div>
-            </div>
-
-
+            </nav>
         </div>
-    )
-}
+    );
+};
 
-export default Sidebar
+export default Sidebar;

@@ -7,11 +7,13 @@ import prop11 from './prop11.jpeg'
 // fromm assets
 import logo from './logob.jpeg'
 import imgblog from './imgblog.jpg'
+import upload_area from './upload_area.png'
 
 // les ellements importe
 
 export const assets = {
-    logo
+    logo,
+    upload_area,
 
 }
 
@@ -19,7 +21,7 @@ export const blog_data = [
     {
         id: 1,
         title: "La Paix dans le Cœur",
-        author: "Prêtre Jean-Pierre",
+        author: "Pasteur Valentin",
         image: imgblog,
         content: "Un article sur la recherche de la paix intérieure...",
         category: 'Lifestyle',

@@ -1,14 +1,12 @@
-import React from 'react'
-import Sidebar from '../components/AdminComponent/Sidebar'
+import React from 'react';
 
-const page = () => {
+const AdminPage = () => {
     return (
         <div>
-
-            <Sidebar />
-
+            <h1>Tableau de bord d'administration</h1>
+            {/* Ajoutez ici le contenu spécifique de votre page d'administration */}
         </div>
-    )
-}
+    );
+};
 
-export default page
+export default AdminPage;
