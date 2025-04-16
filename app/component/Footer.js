@@ -4,12 +4,13 @@ import Image from 'next/image';
 import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
-// les images
+// Importing the image
 import prop from "../../public/assets/img/prop8.jpg";
 
 const Footer = () => {
     const [email, setEmail] = useState('');
 
+    // Animation variants for the footer
     const footerVariants = {
         hidden: { opacity: 0, y: 50 },
         visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.2 } },
@@ -21,8 +22,9 @@ const Footer = () => {
     };
 
     return (
-        <footer className="bg-gray-100 py-12">
+        <footer className="bg-red-100 py-12">
             <div className="container mx-auto px-4">
+                {/* Partners Section */}
                 <section className="mb-12">
                     <motion.h2
                         variants={footerVariants}
@@ -60,14 +62,18 @@ const Footer = () => {
                     </div>
                 </section>
 
+                {/* Footer Links Section */}
                 <section className="bg-white py-12">
                     <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-4">
+                        {/* Charity Section */}
                         <div className="text-center sm:text-left">
                             <h3 className="text-lg font-semibold mb-4 text-gray-800 sm:text-xl">Charity</h3>
                             <p className="text-gray-600 leading-relaxed">
                                 The power of giving: Support a cause and make a difference through charity. Join us in making the world a better place.
                             </p>
                         </div>
+
+                        {/* About Section */}
                         <div className="text-center sm:text-left">
                             <h3 className="text-lg font-semibold mb-4 text-gray-800 sm:text-xl">À Propos</h3>
                             <ul className="space-y-3">
@@ -80,6 +86,8 @@ const Footer = () => {
                                 ))}
                             </ul>
                         </div>
+
+                        {/* Donation Methods Section */}
                         <div className="text-center sm:text-left">
                             <h3 className="text-lg font-semibold mb-4 text-gray-800 sm:text-xl">Moyens de Don</h3>
                             <ul className="space-y-3">
@@ -92,6 +100,8 @@ const Footer = () => {
                                 ))}
                             </ul>
                         </div>
+
+                        {/* Contact Section */}
                         <div className="text-center sm:text-left">
                             <h3 className="text-lg font-semibold mb-4 text-gray-800 sm:text-xl">Contact</h3>
                             <p className="text-gray-600">1234 Rue de la Charité</p>
@@ -102,6 +112,7 @@ const Footer = () => {
                     </div>
                 </section>
 
+                {/* Newsletter Section */}
                 <motion.div
                     variants={newsletterVariants}
                     initial="hidden"
@@ -128,6 +139,7 @@ const Footer = () => {
                     </div>
                 </motion.div>
 
+                {/* Footer Bottom Section */}
                 <div className="bg-gray-800 py-6 mt-12">
                     <motion.div
                         variants={footerVariants}
@@ -155,12 +167,6 @@ const Footer = () => {
 };
 
 export default Footer;
-
-
-
-
-
-
 
 
 
