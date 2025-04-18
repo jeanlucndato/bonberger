@@ -2,13 +2,16 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { usePathname } from 'next/navigation';
 
 // Importing the image
 import prop from "../../public/assets/img/prop8.jpg";
 
 const Footer = () => {
     const [email, setEmail] = useState('');
+    const pathname = usePathname();
 
     // Animation variants for the footer
     const footerVariants = {
@@ -67,7 +70,7 @@ const Footer = () => {
                     <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-4">
                         {/* Charity Section */}
                         <div className="text-center sm:text-left">
-                            <h3 className="text-lg font-semibold mb-4 text-gray-800 sm:text-xl">Charity</h3>
+                            <h3 className="text-lg font-semibold mb-4 text-gray-800 sm:text-xl">BonBerger</h3>
                             <p className="text-gray-600 leading-relaxed">
                                 The power of giving: Support a cause and make a difference through charity. Join us in making the world a better place.
                             </p>
@@ -91,12 +94,21 @@ const Footer = () => {
                         <div className="text-center sm:text-left">
                             <h3 className="text-lg font-semibold mb-4 text-gray-800 sm:text-xl">Moyens de Don</h3>
                             <ul className="space-y-3">
-                                {['Don en Ligne', 'Collecte de Fonds', 'Bénévolat', 'Dons d\'Entreprise', 'Legs et Testaments'].map((item) => (
-                                    <li key={item}>
-                                        <a href="#" className="text-gray-600 hover:text-gray-800 transition-colors duration-300">
-                                            {item}
-                                        </a>
-                                    </li>
+                                {[
+                                    { href: '/', label: 'Don en Ligne' },
+                                    { href: '/', label: 'Collecte de Fonds' },
+                                    { href: '/', label: 'Bénévolat' },
+                                    { href: '/', label: 'Dons d\'Entreprise' },
+                                    { href: '/', label: 'Testaments' },
+                                ].map((link) => (
+                                    <Link
+                                        key={link.href}
+                                        href={link.href}
+                                        className={`text-gray-600 hover:text-gray-800 transition-colors duration-300 ${pathname === link.href ? 'text-red-500 border-b-2 border-white' : ''
+                                            }`}
+                                    >
+                                        {link.label}
+                                    </Link>
                                 ))}
                             </ul>
                         </div>
@@ -107,7 +119,7 @@ const Footer = () => {
                             <p className="text-gray-600">1234 Rue de la Charité</p>
                             <p className="text-gray-600">Goma, Nord-Kivu</p>
                             <p className="text-gray-600">+243 970 000 000</p>
-                            <p className="text-gray-600">contact@charite.org</p>
+                            <p className="text-gray-600">contact@BonBerger.org</p>
                         </div>
                     </div>
                 </section>
@@ -167,10 +179,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-
-
-
-
-
-

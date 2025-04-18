@@ -5,7 +5,7 @@ import { Bebas_Neue } from 'next/font/google';
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 
-import logo from '../../public/assets/img/prop12.jpg';
+import logo from '../../public/assets/img/logo.png';
 
 const bebasNeue = Bebas_Neue({
     subsets: ['latin'],
@@ -114,10 +114,10 @@ export default function Navbar() {
                         </button>
                         <div className="absolute hidden group-hover:block bg-white rounded-md shadow-md mt-2 min-w-[150px] z-10">
                             {[
-                                { href: '/Eglise/Pasteur', label: 'Pasteur' },
-                                { href: '/Eglise/Doctrine', label: 'Doctrine' },
-                                { href: '/Eglise/Pentecote', label: 'Pentecôte' },
-                                { href: '/Eglise/Reunions', label: 'Nos Réunions' },
+                                { href: '/Pasteur', label: 'Pasteur' },
+                                { href: '/Doctrine', label: 'Doctrine' },
+                                { href: '/Pentecote', label: 'Pentecôte' },
+                                { href: '/Reunions', label: 'Nos Réunions' },
                             ].map((submenu) => (
                                 <Link
                                     key={submenu.href}

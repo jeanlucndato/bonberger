@@ -1,11 +1,10 @@
-import { imageConfigDefault } from "next/dist/shared/lib/image-config";
 import prop7 from './prop7.jpg'
 import prop8 from './prop8.jpg'
 import prop9 from './prop9.jpg'
 import prop10 from './prop10.jpg'
 import prop11 from './prop11.jpeg'
 // fromm assets
-import logo from './logob.jpeg'
+import logo from './logo.png'
 import imgblog from './imgblog.jpg'
 import upload_area from './upload_area.png'
 
